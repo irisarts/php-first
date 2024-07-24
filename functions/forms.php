@@ -1,13 +1,16 @@
 <?php
 
-function contactForm() {
-    echo '<form action="contact_process.php" method="POST">';
-    echo '<label for="name">Name:</label>';
-    echo '<input type="text" id="name" name="name" required>';
-    echo '<label for="email">Email:</label>';
-    echo '<input type="email" id="email" name="email" required>';
-    echo '<label for="message">Message:</label>';
-    echo '<textarea id="message" name="message" required></textarea>';
-    echo '<button type="submit">Submit</button>';
-    echo '</form>';
+function contactForm($nameuser = '', $email = '', $comment_msg = '', $error = '') {
+    if ($error) {
+        echo '<p style="color:red;">' . htmlspecialchars($error) . '</p>';
+    }
+    echo '<form action="" method="GET">
+    <label for="username">Naam: </label>
+    <input required type="text" name="username" value="' . htmlspecialchars($nameuser) . '"/><br>
+    <label for="email">E-mail: </label>
+    <input required type="email" name="email" value="' . htmlspecialchars($email) . '"/><br>
+    <label for="comment_msg">Message: </label>
+    <textarea required type="text" name="comment_msg" rows="8">' . htmlspecialchars($comment_msg) . '</textarea><br>
+    <button type="submit">Submit</button>
+    </form>';
 }

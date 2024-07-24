@@ -11,7 +11,7 @@ function startHTML() {
 function startBody() {
     echo '<body>
         <div class="wrapper">
-        <header>Bike Total <i>- A new way of biking</i></header>';
+        <header>Bike Total <i>- A total new way of biking</i></header>';
 }
 
 function showHeader(string $title, string $author, string $stylesheet) {
