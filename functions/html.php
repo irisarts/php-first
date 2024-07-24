@@ -1,5 +1,8 @@
 <?php
 
+include_once 'forms.php';
+include_once 'functions.php';
+
 function startHTML() {
     echo '<!DOCTYPE html>
         <html>';
@@ -19,11 +22,27 @@ function showHeader(string $title, string $author, string $stylesheet) {
         </head>';
 }
 
-function showMainContent() {
-    echo '<main>';
+function showNavbar ($links) {
+    echo '<nav>';
+    echo '<ul>';
+    foreach ($links as $linkText => $url) {
+        echo '<li><a href="'.$url.'">'.$linkText.'</a></li>';
+    }
+    echo '</ul>';
+    echo '</nav>';
+}
 
-    // switch ($page) {
-    //     case 'home':
-            
-    // }
+function showMainContent($content) {
+    echo '<main>';
+    echo $content;
+    echo '</main>';
+}
+
+function showFooter() {
+    echo '<footer>';
+    echo '<p>&copy; '.date('Y').' Bike Total. All rights reserved.</p>';
+    echo '</footer>';
+    echo '</div>';
+    echo '</body>';
+    echo '</html>';
 }

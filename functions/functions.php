@@ -20,15 +20,15 @@ function switchPages($page) {
             // $error = $_GET['error'] ?? '';
             // showContactForm($name, $email, $comment_msg, $error);
             // break;
-        case 'login':
-            // generateLogin();
-            // break;
-        case 'register':
-            // generateRegistration();
-            // break;
-        case 'logout':
-            // logout();
-            // break;
+        // case 'login':
+        //     // generateLogin();
+        //     // break;
+        // case 'register':
+        //     // generateRegistration();
+        //     // break;
+        // case 'logout':
+        //     // logout();
+        //     // break;
         default:
             // showHome();
             // break;
