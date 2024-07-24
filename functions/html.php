@@ -22,11 +22,11 @@ function showHeader(string $title, string $author, string $stylesheet) {
         </head>';
 }
 
-function showNavbar ($links) {
+function showNavbar($links) {
     echo '<nav>';
     echo '<ul>';
-    foreach ($links as $linkText => $url) {
-        echo '<li><a href="'.$url.'">'.$linkText.'</a></li>';
+    foreach ($links as $linkText => $identifier) {
+        echo '<li><a href="?page='.$identifier.'" '.($identifier === ($_GET['page'] ?? 'home') ? 'class="active"' : '').'>'.$linkText.'</a></li>';
     }
     echo '</ul>';
     echo '</nav>';

@@ -12,7 +12,10 @@ $navLinks = [
     'Home' => 'home',
     'About' => 'about',
     'Shop' => 'shop',
-    'Contact' => 'contact'
+    'Contact' => 'contact',
+    'Login' => 'login',
+    'Register' => 'register',
+    'Logout' => 'logout'
 ];
 showNavbar($navLinks);
 switchPages();
