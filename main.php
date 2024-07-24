@@ -6,7 +6,7 @@ function showFullPage() {
     require_once 'functions/pages.php';
 
 startHTML();
-showHeader('Bike Total', 'Author Name', 'styles.css');
+showHeader('Bike Total', 'Author Name', 'assets/css/stylesheet.css');
 startBody();
 $navLinks = [
     'Home' => 'home',
