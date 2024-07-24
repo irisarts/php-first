@@ -1,15 +1,16 @@
 <?php
 
-function switchPages($page) {
+function switchPages() {
+    require_once 'pages.php';
     $page = $_POST['page'] ?? $_GET['page'] ?? 'home';
 
     switch ($page) {
         case 'home':
-            // showHome();
-            // break;
+            showHome();
+            break;
         case 'about':
-            // showAbout();
-            // break;
+            showAbout();
+            break;
         case 'shop':
             // showWebshop();
             // break;
@@ -19,18 +20,18 @@ function switchPages($page) {
             // $comment_msg = $_GET['comment_msg'] ?? '';
             // $error = $_GET['error'] ?? '';
             // showContactForm($name, $email, $comment_msg, $error);
+            break;
+        case 'login':
+            // generateLogin();
             // break;
-        // case 'login':
-        //     // generateLogin();
-        //     // break;
-        // case 'register':
-        //     // generateRegistration();
-        //     // break;
-        // case 'logout':
-        //     // logout();
-        //     // break;
+        case 'register':
+            // generateRegistration();
+            // break;
+        case 'logout':
+            // logout();
+            // break;
         default:
-            // showHome();
-            // break;
+            showHome();
+            break;
     }
 }

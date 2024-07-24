@@ -3,19 +3,18 @@ function showFullPage() {
     require_once 'functions/html.php';
     require_once 'functions/forms.php';
     require_once 'functions/functions.php';
+    require_once 'functions/pages.php';
 
 startHTML();
 showHeader('Bike Total', 'Author Name', 'styles.css');
 startBody();
 $navLinks = [
-    'Home' => 'index.php',
-    'About' => 'about.php',
-    'Products' => 'products.php',
-    'Contact' => 'contact.php'
+    'Home' => 'home',
+    'About' => 'about',
+    'Shop' => 'shop',
+    'Contact' => 'contact'
 ];
 showNavbar($navLinks);
-$content = '<h1>Welcome to Bike Total</h1><p>Discover a new way of biking with us.</p>';
-showMainContent($content);
-contactForm();
+switchPages();
 showFooter();
 }
