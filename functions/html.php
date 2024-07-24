@@ -22,7 +22,8 @@ function showHeader(string $title, string $author, string $stylesheet) {
 function showMainContent() {
     echo '<main>';
 
-    switch ($page) {
-
-    }
+    // switch ($page) {
+    //     case 'home':
+            
+    // }
 }
